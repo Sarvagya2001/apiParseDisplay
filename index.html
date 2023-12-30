@@ -1,0 +1,90 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Product Import</title>
+    </head>
+    <body>
+
+        <p style="margin-left: 20px;"><b>Import Products</b></p>
+        <div class="parent-container">
+            <div class="container">
+                <div class="step">
+                    <span>Step 1:</span>
+                    <p>Select File</p>
+                </div>
+                <div class="file">
+                    <input type="file" id="file-input" accept=".json">
+                    <p>Supported File Type(s) : .CSV,.JSON</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="step">
+                    <span>Step 2:</span>
+                    <p>Specify Format</p>
+                </div>
+                <div class="file">
+                    <div class="form-group">
+                        <label for="file-type">File Type:</label>
+                        <select id="file-type" name="file-type">
+                            <option value="json">JSON</option>
+                            <option value="csv">CSV</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="character-encoding">Character Encoding:</label>
+                        <select id="character-encoding" name="character-encoding">
+                            <option value="utf-8">UTF-8</option>
+                            <option value="utf-16">UTF-16</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="delimiter">Delimiter:</label>
+                        <select id="delimiter" name="delimiter">
+                            <option value=",">Comma (,)</option>
+                            <option value=";">Semicolon (;)</option>
+                            <option value="\t">Tab (\t)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="has-header">Has Header:</label>
+                        <input type="checkbox" id="has-header" name="has-header">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-2">
+            <div class="step">
+                <span>Step 3:</span>
+                <p>Display Handling</p>
+            </div>
+            <div class="file">
+                <p>Select the Files to be Displayed</p>
+                <div id="display-options">
+                    <div class="select-container">
+                        <label for="available-fields">Available Fields</label>
+                        <select multiple id="available-fields"></select>
+                    </div>
+                    <div class="button-container">
+                        <button onclick="addSelectedFields()">>></button>
+                        <button onclick="removeSelectedFields()"><<</button>
+                    </div>
+                    <div class="select-container">
+                        <label for="display-fields">Fields to be Displayed</label>
+                        <select multiple id="display-fields"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="table-container"></div>
+        <button onclick="cancel()" style="float: right;">Cancel</button>
+
+        <button onclick="displayData()" style="background-color: rgb(44, 190, 91);color: white;float: right;">Next</button>
+        <script src="script.js"></script>
+    </body>
+    </html>
+

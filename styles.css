@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container, .container-2 {
+    width: 48%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 0px 10px 0px 10px;
+    padding: 20px;
+    height: 270px;
+    background-color: white;
+}
+.container-2{
+    width: 96%;
+    margin-top: 10px;
+}
+
+.file {
+    float: left;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    width: 150px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+.select-container {
+    width: 50%;
+}
+
+#display-options {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* h5 {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #333;
+} */
+
+/* New style for step */
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
