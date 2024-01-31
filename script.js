@@ -29,16 +29,9 @@ async function fetchDataFromAPI() {
 }
 
 function importData() {
-    // Use this function if data is fetched from API
     fetchDataFromAPI();
 
-    // Use the following code if data is loaded from a local file
-    // if (importedData) {
-    //     // Process imported data as needed
-    //     console.log(importedData);
-    // } else {
-    //     alert('Please select a valid JSON file.');
-    // }
+  
 }
 
 function displayData() {
